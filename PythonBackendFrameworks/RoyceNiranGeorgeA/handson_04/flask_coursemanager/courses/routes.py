@@ -2,7 +2,6 @@ from flask import Blueprint, request, jsonify
 
 courses_bp = Blueprint('courses', __name__, url_prefix='/api/courses')
 
-# Simulated in-memory database storage for tracking courses
 mock_courses_db = [
     {"id": 1, "name": "Computer Science Introduction", "code": "CS101", "credits": 4},
     {"id": 2, "name": "Basic Circuit Analysis", "code": "EE101", "credits": 3}
@@ -25,7 +24,6 @@ def create_course():
     """Step 42: Parse data payload and enforce strict field validations."""
     data = request.get_json()
     
-    # Catch empty payloads or missing Content-Type headers gracefully
     if data is None:
         return make_response_json({"message": "Invalid or missing JSON payload"}, 400)
         
@@ -69,6 +67,5 @@ def course_detail(course_id):
         return make_response_json(course, 200)
         
     elif request.method == 'DELETE':
-        # Remove the global keyword from here since it's now at the top
         mock_courses_db = [c for c in mock_courses_db if c['id'] != course_id]
         return make_response_json({"message": "Course deleted successfully"}, 200)
