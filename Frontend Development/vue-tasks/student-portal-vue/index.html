@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vite App</title>
+    <nav aria-label="Main navigation">
+  <a href="index.html" aria-current="page">Courses</a>
+  <a href="profile.html">Profile</a>
+</nav>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+    <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+<script>
+  cssVars({
+    watch: true,
+    onlyLegacy: false, // Set to true in production; false here to test in DevTools emulation
+    onComplete: function(cssText, styleNode) {
+      console.log('CSS Variables Ponyfill active: Converted var() rules for legacy compatibility.');
+    }
+  });
+</script>
+  </body>
+</html>

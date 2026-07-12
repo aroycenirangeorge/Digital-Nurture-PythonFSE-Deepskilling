@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal | Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Student Portal</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Grades</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="notifications">
+            <h2>Recent Notifications</h2>
+            <div id="notif-container"></div>
+            <div id="notif-feedback"></div>
+        </section>
+            <section id="courses">
+        <h2>Available Courses</h2>
+        
+        <input type="text" id="course-search" placeholder="Search by name...">
+        <button id="sort-credits">Sort by Credits</button>
+
+        <div class="course-grid"></div>
+        <p id="total-credits-display"></p>
+    </section>
+        <section id="hero">
+            <h1>Welcome to the Student Portal</h1>
+            <p>Access your learning resources and track your progress.</p>
+            <button>Explore Courses</button>
+        </section>
+
+        <section id="courses">
+            <h2>Available Courses</h2>
+            <div class="course-grid"></div>
+            <p id="total-credits-display" style="margin-top: 20px; font-weight: bold;"></p>
+        </section>
+    </main>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
